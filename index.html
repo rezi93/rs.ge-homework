@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="https://eservices.rs.ge/img1/HeaderHD/RSLogoNew.png" alt="logo">
+        </a>
+        <span class="chatlogo">
+            <i class="fa-brands fa-rocketchat"></i>
+            <p>RS ჩათი</p>
+        </span>
+    </div>
+    <section class="wraper">
+    <div class="left-block">
+        
+        <form class="form" id="form"  >
+            <input class="input" type="text" name="username" id="user" placeholder="მომხმარებელი ან საიდენტიფიკაციო კოდი" >
+            
+            
+            <input class="input" type="password" name="pass" id="password" placeholder="პაროლი">
+            
+            <button id="btn" type="submit">ავტორიზაცია</button>
+        </form>
+        <div class="regdiv">
+        <button  id="reg" onclick="newLOcatin()">რეგისტრაცია</button>
+        <button class="forgotpass">პაროლის აღდგენა</button>
+        </div>
+        <div class="test" onclick="showTestuser()">
+            <i class="fa-solid fa-circle-user"></i>
+            <p>სატესტო მომხმარებლით ავტორიზაცია</p>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="testauth">
+        <div onclick="testUser()" class="test1" >
+            <i class="fa-sharp fa-solid fa-user"></i>
+            <p class="text">test1</p>
+            
+        </div>
+    
+        <div onclick="testUser2()" class="test2">
+            <i class="fa-sharp fa-solid fa-user"></i>
+            <p class="text">test2</p>
+        </div>
+        </div>
+    </div>
+    <div class="right-block">
+        <div class="main-box">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span class="login-img">
+            
+            <h3 class="log-h3">ორბიჯიანი ავტორიზაცია</h3>
+            <p class="log-text">შემოსავლების სამსახურის ელექტრონული სერვისების გვერდზე მომხმარებლის უფლებების, უსაფრთხოებისა და ინფორმაციის<span id="dot" >...</span><span id="more"> კონფიდენციალურობის დაცვის მიზნით, შემუშავდა ელექტრონული სერვისების გვერდზე ავტორიზაციის დამატებითი მექანიზმი, ეგრეთ წოდებული ორბიჯიანი (SMS) ავტორიზაცია .
+
+                თქვენ საშუალება გაქვთ, გაააქტიუროთ ავტორიზაციის ეს მექანიზმი და სისტემასთან დაკავშირებისას, სახელის და პაროლის შეყვანის შემდგომ, თქვენ მიერ წინასწარ მითითებულ ტელეფონის ნომერზე , SMS შეტყობინების სახით, მოგივათ ავტორიზაციის კოდი და მხოლოდ ამის შემდგომ შეძლებთ სისტემაში მუშაობას. ეს პროცედურა დაგიცავთ მომხმარებლის სახელის და პაროლის მოპარვის შემთხვევაშიც კი თქვენს პორტალზე არასანქცირებული შეღწევისგან.
+                
+                ორბიჯიანი (SMS) ავტორიზაციის ჩართვისას, თქვენ აუცილებლად მოგიწევთ კოდური სიტყვის დაფიქსირება სისტემაში. კარგად დაიმახსოვრეთ კოდური სიტყვა , რადგან მისი ნახვა და შეცვლა შეუძლებელია. კოდური სიტყვის დახმარებით თქვენ შეძლებთ სისტემაში ავტორიზაციის გარეშე ტელეფონის ნომრის შეცვლას.
+                
+                იმ შემთხვევაში, თუ თქვენ დაგავიწყდათ პაროლი და კოდური სიტყვა, მათ შეცვლას მოახერხებთ შემოსავლების სამსახურის ნებისმიერ სერვისცენტრში.</span></p>
+                <button id="loadbtn" onclick="showMore()">იხილეთ მეტი</button>
+        </span>
+        </div>
+        <div class="main-box">
+            <i class="fa-solid fa-code"></i>
+            <span class="login-img">
+            <h3 class="log-h3">პროტოკოლში ცვლილების შესახებ შეტყობინებების გამოწერა !</h3>
+            <p class="log-text">თუ თქვენ, იყენებთ შემოსავლების სამსახურის მიერ შემოთავაზებულ ვებ-სერვისებს (ა/ფაქტურა, სასაქონლო ზედნადების და სხვა<span id="dots" >...</span><span id="loadmore"> სახის მონაცემების წარმოება) და აღნიშნული სერვისები ჩაშენებული გაქვთ თქვენს პროგრამულ პროდუქტებში , გთხოვთ შეავსოთ ელექტრონული ფორმა რათა დროულად მიიღოთ ინფორმაცია ვებ-სერვისებში ტექნიკური ცვლილებების დაგეგმვისა და მიმდინარეობების შესახებ. 
+
+            </span></p>
+            <button class="mybtn" id="loadbtn" onclick="viewMore()">იხილეთ მეტი</button>
+            </span>
+        </div>
+    </div>
+    </section>
+    <section>
+        <footer>
+            <div class="foot-div">
+                <span class="block1">
+                    <p> საინფორმაციო ცენტრი</p>
+                    <p>2 299 299</p>
+                    
+                </span>
+                <span class="block2">
+                    <span class="foot-box">
+                        <i class="fa-solid fa-download"></i>
+                    <p>დამხმარე პროგრამები</p>
+                </span>
+                <span class="foot-box">
+                    <span class="wiki"><i class="fa-solid fa-question"></i></span>
+                    <p>WIKI</p>
+                </span>
+                </span>
+                <span class="block3">
+                    <i class="fa-brands fa-youtube"></i>
+                    <p>ვიდეო ინსრტუქცია</p>
+                </span>
+            </div>
+        </footer>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

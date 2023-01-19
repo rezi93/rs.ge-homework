@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(228, 235, 242);
+    position: relative;
+}
+.header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    
+    background-color: #2d7ed0;
+}
+.chatlogo{
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 70px;
+    margin-left: 85%;
+    color: white;
+}
+.wraper{
+    display: flex;
+}
+.left-block{
+    width: 500px;
+    height: 500px;
+    margin-left: 200px;
+    margin-top: 50px;
+    background-color: white;
+    
+
+}
+.right-block{
+   width: 700px;
+   margin-left: 80px;
+   display: flex;
+   flex-direction: column;
+}
+.main-box{
+    display: flex;
+}
+.fa-right-to-bracket{
+    font-size: 30px;
+    margin-top: 100px;
+}
+.fa-code{
+    font-size: 30px;
+    margin-top: 80px;
+}
+.login-img{
+    margin-top: 80px;
+    margin-left: 20px;
+}
+.input{
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    margin-top: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#btn{
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    margin-top: 35px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background-color: #2d7ed0;
+    border-radius: 7px;
+}
+#btn:hover{
+    font-size: 25px;
+    transition: ease-in-out 3ms;
+}
+#errors-text{
+    
+    color: red;
+    display: block;
+    font-size: 12px;
+}
+.regdiv{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 30px;
+    margin: auto;
+
+}
+#reg{
+    width: 150px;
+    height: 25px;
+    font-size: 17px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.forgotpass{
+    width: 150px;
+    height: 25px;
+    font-size: 17px;
+    border: none;
+}
+.test{
+    width: 80%;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+    margin: auto;
+    margin-top: 60px;
+    cursor: pointer;
+    
+}
+.testauth{
+    display: none;
+}
+.used{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.testauth.active{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.test1{
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    
+
+}
+
+.test2{
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    
+
+}
+
+.fa-user  {
+    font-size: 25px;
+    
+   color: rgb(234, 75, 75);
+    
+}
+.text{
+    font-size: 18px;
+    color: black;
+}
+
+
+/* footer*/
+.foot-div{
+    display: flex;justify-content: space-around;
+    width: 100%;
+    height: 150px;
+    margin-top: 80px;
+}
+.block1{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.block2{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 200px;
+}
+.block3{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin-left: 20px;
+}
+.fa-youtube{
+    font-size: 18px;
+    color:#2d7ed0 ;
+}
+.fa-download{
+    font-size: 18px;
+    color:#2d7ed0 ;
+}
+.foot-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+ .wiki{
+    width: 20px;
+    height: 20px;
+    background-color: #2d7ed0;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    
+ } 
+
+/* registration */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+    
+}
+.back-click{
+    font-size: 30px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 30%;
+    cursor: pointer;
+    
+}
+.form-box{
+   display:flex ;
+   justify-content: space-between;
+   margin-top: 30px;
+    
+
+}
+.input-reg{
+    width: 400px;
+    height: 30px;
+    margin-top: 100px;
+   
+   
+}
+.check{
+    font-size: 10px;
+    height: 10px;
+}
+.grid-item{
+   width: 400px;
+   height:50px;
+   margin-right: 50px;
+    
+}
+.ques-box{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: left;
+    margin-top: 80px;
+    margin-left: 0;
+
+}
+.question{
+    text-align: center;
+width: 20px;
+height: 20px;
+background-color: green;
+border-radius: 50px;
+color: white;
+}
+.input-block{
+    width: 400px;
+   height:50px;
+   margin-left: 50px;
+}
+#regbtn{
+    height: 40px;
+    width: 400px;
+    border-radius: 7px;
+    margin-top: 50px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(74, 74, 242);
+    cursor: pointer;
+}
+.checkspan{
+    width: 80px;
+    height: 15px;
+}
+.errors{
+    display: inline;
+    font-size: 13px;
+    color: brown;
+}
+/* read more */
+#more{
+    display: none;
+    cursor: pointer;
+}
+.show{
+    display: inline;
+}
+#loadbtn{
+    /* background-color: rgb(40, 38, 38); */
+    color: black;
+    cursor: pointer;
+    border: none;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+/* todo */
+
+.conteiner{
+    width: 500px;
+    height: 700px;
+  text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #edf2f6;
+}
+    
+   
+#inputField {
+    width: 300px;
+    height: 46px;
+    border-width: 0;
+    border: 1px solid black;
+    outline: none;
+    font-size: 25px;
+    vertical-align: middle;
+    margin-top: 50px;
+}
+
+#addToDo {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    vertical-align: middle;
+    font-size: 30px;
+    margin-top: 50px;
+}
+.todo-title{
+    font-weight: 800;
+    text-align: center;
+}
+
+.paragraph-styling {
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.to-dos {
+    margin-top: 25px;
+}
+.dlbtn{
+    background-color: rgb(81, 81, 236);
+    color: white;
+    margin-left: 70px;
+    
+}

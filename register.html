@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="https://eservices.rs.ge/img1/HeaderHD/RSLogoNew.png" alt="logo">
+        </a>
+        <span class="back-click" onclick="goback()"><i class="fa-solid fa-angle-left"></i></span>
+        <span class="chatlogo">
+            <i class="fa-brands fa-rocketchat"></i>
+            <p>RS ჩათი </p>
+        </span>
+    </div>
+    <div class="container">
+        <h2 class="h2">ახალი მომხმარებლის რეგისტრაცია</h2>
+        
+        <form  id="regform" >
+            <div class="form-box">
+            <div class="grid-item">
+            <input class="input-reg" type="text" name="userName" id="reguser" placeholder="მომხმარებელი (6 სიმბოლოზე მეტი)" >
+            <span id="errors-text" class="error_myuser" ></span>
+            
+            
+            <input class="input-reg" type="password" name="pass" id="passw" placeholder="პაროლი (6 სიმბოლოზე მეტი)">
+            <span id="errors-text" class="error_mypasword" ></span>
+            <input class="input-reg" type="password" name="pass2" id="passw2" placeholder="გაიმეორეთ პაროლი">
+            <span id="errors-text" class="error_mypasword2" ></span>
+            <div class="ques-box">
+            <span class="question"><i class="fa-solid fa-question"></i></span>
+            <p>რეგისტრაციის პროცედურები</p>
+            </div>
+        </div>
+             <div class="input-block">
+            <input class="input-reg" type="text" name="userId" id="lastnm" placeholder="საიდენტიფიკაციო/პირადი ნომერი" >
+            <span id="errors-text" class="error_myuserid" ></span>
+            <input class="input-reg" type="number" name="phone" id="Phone" placeholder="მობილურის ნომერი (5XXXXXXXX)" >
+            <span id="errors-text" class="error_myphone" ></span>
+
+            <input class="input-reg" type="email" name="email" id="emailreg" placeholder="ელექტრონული ფოსტა" >
+            <span id="errors-text" class="error_myemail" ></span>
+            <input type="checkbox"  class="checkbox">
+            <label for="checkbox" class="check">მივიღო შეტყობინებები ელ-ფოსტაზე</label>
+
+            <button type="submit" id="regbtn">რეგისტრაცია</button>
+            </div>
+            </div>
+        </form>
+        
+    </div>
+            
+    <script src="script.js"></script>
+</body>
+</html>
