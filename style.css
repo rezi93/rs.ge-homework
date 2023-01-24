@@ -318,6 +318,8 @@ color: white;
 /* todo */
 
 .conteiner{
+    display: flex;
+    flex-direction: column;
     width: 500px;
     height: 700px;
   text-align: center;
@@ -328,7 +330,7 @@ color: white;
 }
     
    
-#inputField {
+.todo-input {
     width: 300px;
     height: 46px;
     border-width: 0;
@@ -336,16 +338,17 @@ color: white;
     outline: none;
     font-size: 25px;
     vertical-align: middle;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 #addToDo {
-    height: 50px;
-    width: 50px;
+    height: 46px;
+    width: 300px;
     border: 1px solid black;
     vertical-align: middle;
     font-size: 30px;
     margin-top: 50px;
+    background-color: #2d7ed0;
 }
 .todo-title{
     font-weight: 800;

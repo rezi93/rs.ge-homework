@@ -5,42 +5,42 @@
 
     
    
-let forelement=document.getElementById('form');
-forelement.addEventListener('submit', function(event){
-    event.preventDefault();
+// let forelement=document.getElementById('form');
+// forelement.addEventListener('submit', function(event){
+//     event.preventDefault();
 
-    let errors=document.querySelector('.error');
+//     let errors=document.querySelector('.error');
     
     
-   let users={Username:'username',
-   Password:'password'
-}
+//    let users={Username:'username',
+//    Password:'password'
+// }
 
-let username=document.getElementById('user').value;
-if( username==""){
-    alert('username can not be empty');
-    return false
+// let username=document.getElementById('user').value;
+// if( username==""){
+//     alert('username can not be empty');
+//     return false
     
-}
-let password=document.getElementById('password').value;
+// }
+// let password=document.getElementById('password').value;
     
-    if( password==''){
+//     if( password==''){
         
-        alert('password do not  be empty');
-    return false
+//         alert('password do not  be empty');
+//     return false
         
-    }
+//     }
    
     
-    if(password!=="" && username !==''){
-        alert('form submited');
-        sessionStorage.setItem('log',JSON.stringify(users));
-        let location=window.location.href='todo.html';
-    }else{
-    alert("not submit")
-    }
-   forelement.submit();
-});
+//     if(password!=="" && username !==''){
+//         alert('form submited');
+//         sessionStorage.setItem('log',JSON.stringify(users));
+//         let location=window.location.href='todo.html';
+//     }else{
+//     alert("not submit")
+//     }
+//    forelement.submit();
+// });
 
 
 
@@ -86,71 +86,71 @@ let logOutTimer=setTimeout(function(){sessionStorage.clear();} (8000));
 
 // // registration
 
-let regform=document.getElementById('regform');
-regform.addEventListener('submit',function(event){
-    event.preventDefault();
-    let error={};
+// let regform=document.getElementById('regform');
+// regform.addEventListener('submit',function(event){
+//     event.preventDefault();
+//     let error={};
 
-    console.log(event.target);
-    let formElement=event.target;
+//     console.log(event.target);
+//     let formElement=event.target;
 
-    let userName=document.getElementById('reguser').value;
-if( userName==""){
-    error.myuser="enter your username";
+//     let userName=document.getElementById('reguser').value;
+// if( userName==""){
+//     error.myuser="enter your username";
     
-}
-let userid=document.getElementById('lastnm').value;
-if(userid==""){
-    error.myuserid='enter your ID';
-};
-let email=document.getElementById('emailreg').value;
-let pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-if(email==""||!email. match (pattern)){
-    error.myemail='enter your email';
-};
-let phonenum=document.getElementById('Phone');
-if(phonenum==""){
-    error.myphone='enter your phone number';
-}
+// }
+// let userid=document.getElementById('lastnm').value;
+// if(userid==""){
+//     error.myuserid='enter your ID';
+// };
+// let email=document.getElementById('emailreg').value;
+// let pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// if(email==""||!email. match (pattern)){
+//     error.myemail='enter your email';
+// };
+// let phonenum=document.getElementById('Phone');
+// if(phonenum==""){
+//     error.myphone='enter your phone number';
+// }
 
-let pasword=document.getElementById('passw').value;
-let pasword2=document.getElementById('passw2').value;
+// let pasword=document.getElementById('passw').value;
+// let pasword2=document.getElementById('passw2').value;
     
-    if( pasword==''||pasword!==pasword2){
-        error.mypasword='password do not  be empty ';
-    }
-    if( pasword2==''||pasword!==pasword2){
-        error.mypasword2='password do not  match ';
-    }
+//     if( pasword==''||pasword!==pasword2){
+//         error.mypasword='password do not  be empty ';
+//     }
+//     if( pasword2==''||pasword!==pasword2){
+//         error.mypasword2='password do not  match ';
+//     }
 
 
 
-    for (let item in error){
-        let errorsspan=document.querySelector('.error_'+ item);
-        if(errorsspan){
-            errorsspan.innerText=error[item];
-        }
-    }
-   var storage=regform;
-    if(Object.keys(error).length==0){
-        alert('form submited');
-        sessionStorage.setItem('form',JSON.stringify(storage));
-        window.location.href="todo.html";
-    }
-    formElement.submit()
+//     for (let item in error){
+//         let errorsspan=document.querySelector('.error_'+ item);
+//         if(errorsspan){
+//             errorsspan.innerText=error[item];
+//         }
+//     }
+//    var storage=regform;
+//     if(Object.keys(error).length==0){
+//         alert('form submited');
+//         sessionStorage.setItem('form',JSON.stringify(storage));
+//         window.location.href="todo.html";
+//     }
+//     formElement.submit()
 
     
-});
+// });
 
 
-let error={
-    myuser:"enter your username",
-    mypasword:"password do not  be empty ",
-    mypasword2:"pasword do not match",
-    myuserid:"enter your ID",
-    myemail:"enter your email",
-    myphone:"enter your phone number"
-};
+// let error={
+//     myuser:"enter your username",
+//     mypasword:"password do not  be empty ",
+//     mypasword2:"pasword do not match",
+//     myuserid:"enter your ID",
+//     myemail:"enter your email",
+//     myphone:"enter your phone number"
+// };
 
 
 
@@ -201,35 +201,91 @@ if(dot.style.display==="none"){
 // todo list
 
 
-let addToDoButton = document.getElementById('addToDo');
-let toDoContainer = document.getElementById('toDoContainer');
-let inputField = document.getElementById('inputField');
 
-addToDoButton.addEventListener('click', function(){
-    var paragraph = document.createElement('p');
-    paragraph.classList.add('paragraph-styling');
-    paragraph.innerText = inputField.value;
-    toDoContainer.appendChild(paragraph);
-    let dlbtn=document.createElement('button');
-        dlbtn.classList.add('dlbtn')
-        dlbtn.innerText='delete';
-    paragraph.appendChild(dlbtn);
+function todoapp() {
+var addToDoButton = document.getElementById('addToDo');
+var toDoContainer = document.getElementById('toDoContainer');
+var inputField = document.getElementById('inputField');
+var phonebook=document.getElementById('numField');
 
-    var settodo={
-        task:inputField.value,
-        completed:false
-    }
-    inputField.value = "";
-    sessionStorage.setItem("input",JSON.stringify(settodo))
+    
+
+
+    
+
+
+    addToDoButton.addEventListener('click', function(){
    
-    dlbtn.addEventListener('click', function(){
-      
-        toDoContainer.removeChild(paragraph);
-        if(sessionStorage.value){
-            sessionStorage.removeItem("input")
+        
+
+
+        
+            var paragraph ={}= document.createElement('p');
+            paragraph.forEach((item,x)=>{
+            paragraph.classList.add('paragraph-styling');
+            paragraph.innerText = inputField.value;
+            
+        })
+       
+        
+
+        var myparagraph=document.createElement('p')
+        myparagraph.classList.add('paragraph-styling');
+        myparagraph.innerText=phonebook.value;
+        toDoContainer.appendChild(paragraph);
+        let dlbtn=document.createElement('button');
+            dlbtn.classList.add('dlbtn')
+            dlbtn.innerText='delete';
+        paragraph.appendChild(dlbtn);
+     
+        class mytodo
+            {
+            constructor(name,phonenumber){
+                
+          this.name=name;
+          this.phonenumber=phonenumber;
+            }
         }
+        
+         var settodo=[];
+        var settodo=new mytodo(
+            inputField.value,
+            phonebook.value
+            
+        )
+
+        // settodo.forEach((item,i)=>{
+        //     item.id=i+1;
+        //     console.log(settodo);
+        // })
+        
+    
+        
+        
+    
+        // inputField.value = "";
+        // phonebook.value="";
+        
+            
+        
+        sessionStorage.setItem("input",JSON.stringify(settodo))
+        
+       
+        dlbtn.addEventListener('click', function(){
+          
+            toDoContainer.removeChild(paragraph);
+            
+            
+        })
+    
+        
+            
+        
     })
-})
+    
+    
+}
+
 
 
   
