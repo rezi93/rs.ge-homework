@@ -202,89 +202,72 @@ if(dot.style.display==="none"){
 
 
 
-function todoapp() {
-var addToDoButton = document.getElementById('addToDo');
-var toDoContainer = document.getElementById('toDoContainer');
-var inputField = document.getElementById('inputField');
-var phonebook=document.getElementById('numField');
-
-    
-
-
-    
-
-
-    addToDoButton.addEventListener('click', function(){
-   
-        
-
-
-        
-            var paragraph ={}= document.createElement('p');
-            paragraph.forEach((item,x)=>{
-            paragraph.classList.add('paragraph-styling');
-            paragraph.innerText = inputField.value;
-            
-        })
-       
-        
-
-        var myparagraph=document.createElement('p')
-        myparagraph.classList.add('paragraph-styling');
-        myparagraph.innerText=phonebook.value;
-        toDoContainer.appendChild(paragraph);
-        let dlbtn=document.createElement('button');
-            dlbtn.classList.add('dlbtn')
-            dlbtn.innerText='delete';
-        paragraph.appendChild(dlbtn);
-     
-        class mytodo
+   class mytodo
             {
-            constructor(name,phonenumber){
+            constructor(name,phonenumber,id){
                 
           this.name=name;
           this.phonenumber=phonenumber;
+          this.id=Date.now();
             }
         }
-        
-         var settodo=[];
-        var settodo=new mytodo(
+
+        var phonebook=document.getElementById('numField').value
+        var inputField = document.getElementById('inputField').value;
+       
+
+    var toDo=[];
+
+    
+        toDo=new mytodo(
             inputField.value,
             phonebook.value
             
         )
 
-        // settodo.forEach((item,i)=>{
-        //     item.id=i+1;
-        //     console.log(settodo);
-        // })
+    function addtodo(){
+
+        toDo.push(inputField);
+        toDo.push(phonebook);
         
+        console.log(toDo);
+        
+    }
+
+    function printtodo(){
+
+        var toDoContainer = document.getElementById('toDoContainer');
+        toDoContainer.innerHTML="";
+
+        for(var i=0;i<toDo.length;i++){
+            var li=document.createElement('li');
+            var listitem=li.appendChild(document.createTextNode(toDo[i]));
+            toDoContainer.appendChild(listitem);
+            deltodo();
+            sessionStorage.setItem("input",JSON.stringify(toDo[i]))
+        }
+        
+    }
+
+    function deltodo(){
+        let dlbtn=document.createElement('button');
+            dlbtn.classList.add('dlbtn')
+            dlbtn.innerText='delete';
+        listitem.appendChild(dlbtn);
+    }
+
+
+    var addToDoButton = document.getElementById('addToDo');
+    addToDoButton.addEventListener('click',function (){
+
+    addtodo();
+    printtodo();
     
-        
-        
-    
-        // inputField.value = "";
-        // phonebook.value="";
-        
-            
-        
-        sessionStorage.setItem("input",JSON.stringify(settodo))
-        
-       
-        dlbtn.addEventListener('click', function(){
-          
-            toDoContainer.removeChild(paragraph);
-            
-            
-        })
-    
-        
-            
         
     })
     
     
-}
+
 
 
 
