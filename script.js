@@ -202,68 +202,74 @@ if(dot.style.display==="none"){
 
 
 
-   class mytodo
-            {
-            constructor(name,phonenumber,id){
-                
-          this.name=name;
-          this.phonenumber=phonenumber;
-          this.id=Date.now();
-            }
-        }
+   
 
         var phonebook=document.getElementById('numField').value
         var inputField = document.getElementById('inputField').value;
-       
-
-    var toDo=[];
-
-    
-        toDo=new mytodo(
-            inputField.value,
-            phonebook.value
-            
-        )
+        phonebook={};
+        inputField={};
+   
+   var todo=[];
+   
 
     function addtodo(){
-
-        toDo.push(inputField);
-        toDo.push(phonebook);
         
-        console.log(toDo);
+            todo.push(inputField);
+            todo.push(phonebook);
+     
+            for(item of todo){
+            console.log(item);
+        }
+           
+            
+           
+    
         
-    }
+        }
+        
+        
+    
 
     function printtodo(){
 
         var toDoContainer = document.getElementById('toDoContainer');
         toDoContainer.innerHTML="";
 
-        for(var i=0;i<toDo.length;i++){
+        for(var i=0;i<todo.length;i++){
             var li=document.createElement('li');
-            var listitem=li.appendChild(document.createTextNode(toDo[i]));
-            toDoContainer.appendChild(listitem);
-            deltodo();
-            sessionStorage.setItem("input",JSON.stringify(toDo[i]))
-        }
-        
-    }
-
-    function deltodo(){
-        let dlbtn=document.createElement('button');
+            
+            var listitem=li.appendChild(document.createTextNode(todo[i]));
+            let dlbtn=document.createElement('button');
             dlbtn.classList.add('dlbtn')
             dlbtn.innerText='delete';
-        listitem.appendChild(dlbtn);
-    }
+        li.appendChild(dlbtn);
+            toDoContainer.appendChild(listitem);
+
+            sessionStorage.setItem("input",JSON.stringify(todo[i]))
+            
+            
+        }
+        
+           
+        }
+        
+    
+
+    
 
 
     var addToDoButton = document.getElementById('addToDo');
-    addToDoButton.addEventListener('click',function (){
+    
+    addToDoButton.addEventListener('click',function (e){
+      e.preventDefault();
+      
+            
+                
 
     addtodo();
     printtodo();
     
-        
+   
     })
     
     
